@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function vowels() {
+            let inputChar = document.getElementById("vowelChar").value;
+
+            if (inputChar == "A" || inputChar == "E" || inputChar == "I" || inputChar == "O" || inputChar == "U" ||
+                inputChar == "a" || inputChar == "e" || inputChar == "i" || inputChar == "o" || inputChar == "u") {
+                document.getElementById("vowelResult").value =
+                    "The given " + inputChar + " is a vowel";
+            } else {
+                document.getElementById("vowelResult").value =
+                    "The given " + inputChar + " is not a vowel";
+            }
+        }
+        function between() {
+            let inputNum = parseInt(document.getElementById("rangeNum").value);
+
+            if (inputNum >= 5 && inputNum <= 10) {
+                document.getElementById("rangeResult").value =
+                    "Given " + inputNum + " is in the range 5 to 10";
+            } else {
+                document.getElementById("rangeResult").value =
+                    "Given " + inputNum + " is not in the range 5 to 10";
+            }
+        }
+        function char() {
+            let inputChar = document.getElementById("caseChar").value;
+            if (inputChar <= "A" && inputChar <= "Z") {
+                document.getElementById("caseResult").value =
+                    "given " + inputChar + " is a Uppercase";
+            } else {
+                document.getElementById("caseResult").value =
+                    "given " + inputChar + " is a lowercase";
+            }
+        }
+
+        function alphabet() {
+            let inputChar = document.getElementById("alphaChar").value;
+            if ((inputChar >= "A" && inputChar <= "Z") || (inputChar >= "a" && inputChar <= "z")) {
+                document.getElementById("alphaResult").value =
+                    "the given" + inputChar + " is a alphabet";
+            } else {
+                document.getElementById("alphaResult").value =
+                    "the given " + inputChar + " is not a alphabet";
+            }
+        }
+        function digit() {
+            let inputVal = parseInt(document.getElementById("digitVal").value);
+            if (inputVal >= "0" && inputVal <= "9") {
+                document.getElementById("digitResult").value =
+                    "The Given " + inputVal + " is a digit";
+            } else {
+                document.getElementById("digitResult").value =
+                    "The Given " + inputVal + " is a number";
+            }
+        }
+        function login() {
+            let enteredName = document.getElementById("loginName").value;
+            let enteredPassword = document.getElementById("loginPassword").value;
+            if (enteredName == "Krishna" && enteredPassword == "Krishna@123") {
+                document.getElementById("loginResult").value =
+                    "LOGIN SUCCESSFULLY";
+            } else {
+                document.getElementById("loginResult").value =
+                    "INCORRECT UR DETAILS";
+            }
+        }
+
+    </script>
+
+    <body>
+        </head>
+        <h1>Given char is vowel or not</h1>
+
+        <label for="">Enter the char:</label>
+        <input type="text" id="vowelChar"> <br> <br>
+        <label for="">result:</label>
+        <input type="text" id="vowelResult"> <br> <br>
+        <button onclick="vowels()">Check the char</button>
+
+        <h1>Num between 1 to 10</h1>
+
+        <label for="">Enter the Number:</label>
+        <input type="text" id="rangeNum"> <br> <br>
+        <label for="">result:</label>
+        <input type="text" id="rangeResult" size="30"> <br> <br>
+        <button onclick="between()">Checkout here</button>
+
+        <h1>Given char is uppercase or not</h1>
+
+        <label for="">Enter the char:</label>
+        <input type="text" id="caseChar"> <br> <br>
+        <label for="">result:</label>
+        <input type="text" id="caseResult" size="30"> <br> <br>
+        <button onclick="char()">Check the char</button>
+
+        <h1>Given char is Alphabet or not</h1>
+
+        <label for="">Enter the char:</label>
+        <input type="text" id="alphaChar"> <br> <br>
+        <label for="">result:</label>
+        <input type="text" id="alphaResult" size="30"> <br> <br>
+        <button onclick="alphabet()">Check the char</button>
+
+        <h1>Given value is digit or not</h1>
+
+        <label for="">Enter the digit:</label>
+        <input type="text" id="digitVal"> <br> <br>
+        <label for="">result:</label>
+        <input type="text" id="digitResult" size="30"> <br> <br>
+        <button onclick="digit()">check digit</button>
+
+        <h1>Login is Successfully or not</h1>
+
+        <label for="">Enter the name:</label>
+        <input type="text" id="loginName"> <br> <br>
+        <label for="">Enter the password:</label>
+        <input type="text" id="loginPassword"> <br> <br>
+        <label for="">result:</label>
+        <input type="text" id="loginResult" size="30"> <br> <br>
+        <button onclick="login()">Login here</button>
+
+
+
+    </body>
+
+</html>

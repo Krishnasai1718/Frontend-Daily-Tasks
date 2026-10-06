@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(184, 132, 102);
+      }
+      .container {
+        width: 250px;
+        height: 250px;
+        perspective: 800px;
+      }
+      .cube {
+        height: 250px;
+        width: 250px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 6s linear infinite;
+      }
+      .side {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid white;
+      }
+      .front {
+        background-color: rgb(122, 47, 193);
+        transform: translateZ(100px);
+      }
+      .back {
+        background-color: rgb(245, 16, 123);
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      .right {
+        background-color: rgb(240, 19, 240);
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      .left {
+        background-color: orange;
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      .top {
+        background-color: rgb(18, 218, 151);
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      .bottom {
+        background-color: rgb(197, 75, 30);
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+      @keyframes rotate {
+        from {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        to {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cube">
+        <div class="side front">Front</div>
+        <div class="side right">Right</div>
+        <div class="side back">Back</div>
+        <div class="side left">Left</div>
+        <div class="side top">Top</div>
+        <div class="side bottom">Bottom</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <style>
+        .head{
+            text-align: center;
+            background-image: linear-gradient(chocolate,rgb(162, 162, 45));
+            color: white;
+        }
+         body{
+            background-image: url("interior3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #event{
+            color: #fb8500;
+            text-align: center;
+        }
+        table{
+             border: 3px solid black;
+            background-color: white;
+            color: black;
+            height: 300px;
+            width: 800px;
+            border-collapse: collapse;
+            color: black;
+        }
+        th{
+            border: 2px solid black;
+            color: white;
+            background-color: chocolate;
+    
+        }
+        td{
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+        }
+        .reserve{
+            background-color: antiquewhite;
+        }
+        #reserve{
+            color: blue;
+            text-align: center;   
+        }
+        #para{
+            color: white;
+        }
+        #form{
+            color: red;
+            text-align: center;
+        }
+        .field{
+            text-align: center;
+        }
+        #name{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #mail{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #phone{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #date{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #time{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #guest{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .option-group{
+            text-align: center;
+        }
+        .group-title{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .title{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;   
+        }
+        .city{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700; 
+        }
+        .instagram{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700; 
+        }
+        .request{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700; 
+        }
+        .buttons{
+            text-align: center;
+        }
+        .reserve-btn{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+            background-color:#780000;
+        }
+        .reset{
+             text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 700; 
+            background-color: #780000;
+        }
+        .copy{
+            text-align: center;
+             color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Brew & Bite 60 cafe☕</h1><br>
+        <h3>Where Coffee Meets Conversations</h3><br>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reservations.html">Reservations</a>
+            <a href="menu.html">Menu</a>
+        </nav>
+    </div>
+    <hr>
+    <div>
+        <h1 id="event">Upcoming Events🎉</h1>
+        <table align="center">
+            <tr>
+                <th colspan="4">
+                    Upcoming Events
+                </th>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Music</td>
+                <td>Live Music Night</td>
+                <td>10 July 2026</td>
+                <td>8PM</td>
+            </tr>
+            <tr>
+                <td>Acousting Evening</td>
+                <td>18 July 2026</td>
+                <td>4PM</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Workshops</td>
+                <td>Coffee Workshop</td>
+                <td>15 July 2026</td>
+                <td>5PM</td>
+            </tr>
+            <tr>
+                <td>Dessert Festival</td>
+                <td>20 July 2026</td>
+                <td>6PM</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+     <h2 id="reserve">Reserve Your Table 🍽️</h2>
+    <p id="para">Fill in the details and reserve your favourite spot.</p>
+    <div class="reserve">
+
+        <h2 id="form">Reservation Form</h2>
+        <form>
+ 
+      <div class="field">
+        <label id="name">Full Name</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+      </div><br>
+ 
+      <div class="field">
+        <label id="mail">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div><br>
+ 
+      <div class="field">
+        <label id="phone">Phone Number</label><br>
+        <input type="tel" id="phone number" name="phone" placeholder="Enter mobile number" required>
+      </div><br>
+ 
+      <div class="field">
+        <label id="date">Reservation Date</label><br>
+        <input type="date" id="resdate" name="resdate" required>
+      </div><br>
+ 
+      <div class="field">
+        <label id="time">Reservation Time</label><br>
+        <input type="time" id="restime" name="restime" required>
+      </div><br>
+ 
+      <div class="field">
+        <label id="guest">Number of Guests</label><br>
+        <input type="number" id="guests" name="guests" min="1" max="20">
+      </div><br>
+ 
+      <div class="option-group">
+        <span class="group-title">Occasion</span><br>
+        <label><input type="radio" name="occasion" value="birthday"> Birthday</label><br>
+        <label><input type="radio" name="occasion" value="anniversary"> Anniversary</label><br>
+        <label><input type="radio" name="occasion" value="casual"> Casual Visit</label><br>
+      </div><br>
+ 
+      <div class="option-group">
+        <span class="title">Food Preference</span><br>
+        <label><input type="checkbox" name="food" value="vegetarian">   Vegetarian</label><br>
+        <label class="indent"><input type="checkbox" name="food" value="nonvegetarian">   Non-Vegetarian</label><br>
+        <label class="indent" style="padding-left:48px;"><input type="checkbox" name="food" value="vegan"> Vegan</label>
+      </div><br>
+ 
+      <div class="field">
+        <label class="city">City</label><br>
+        <input type="text" id="city" name="city">
+      </div><br>
+ 
+      <div class="field">
+        <label class="instagram">Instagram Profile</label><br>
+        <input type="url" id="instagram" name="instagram" placeholder="Paste profile link">
+      </div><br>
+ 
+      <div class="field">
+        <label class="request">Special Request</label><br>
+        <textarea id="request" name="request"></textarea>
+      </div><br>
+ 
+      <div class="buttons">
+        <button type="submit" class="reserve-btn">Reserve Now</button>
+        <button type="reset" class="reset">Reset</button>
+      </div><br>
+ 
+    </form>
+    </div>
+    <hr>
+     <div class="copy">
+        <h1 id="contact">Contact Us📞</h1>
+        <p>Email:cafe@brewandbite.com</p>
+        <p>Phone: +91 6300096147</p>
+        <p>Address:Hightech city,Hyderabad</p>
+        <p>&copy;2026 Brew&Bite 60 Cafe.All Rights reserved.</p>
+    </div>
+</body>
+</html>

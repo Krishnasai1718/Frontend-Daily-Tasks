@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(
+          rgb(27, 90, 117),
+          rgb(53, 53, 147),
+          rgb(8, 8, 78)
+        );
+      }
+      .container {
+        display: grid;
+        height: 1200px;
+        width: 100%;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 60px auto 60px;
+        gap: 20px;
+      }
+      .header {
+        background-color: rgba(120, 170, 255, 0.25);
+        border-radius: 15px;
+        grid-column: 1/8;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .header input {
+        background-color: rgba(42, 38, 38, 0.614);
+        width: 550px;
+        height: 40px;
+        border-radius: 15px;
+      }
+      #bell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+        font-size: 25px;
+      }
+      #img1 {
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+      }
+      .header h2 {
+        margin-left: 20px;
+        font-size: 30px;
+        font-family: sans-serif;
+      }
+      .main {
+        display: grid;
+        grid-column: 1/8;
+        grid-row: 2/7;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+      }
+      .side {
+        background-color: rgb(29, 29, 29);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        color: white;
+        grid-column: 1/3;
+        grid-row: 1/6;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+      .side h3 {
+        margin-right: 300px;
+        font-size: 25px;
+        margin-top: 20px;
+      }
+      .side ul {
+        width: 90%;
+      }
+      .side ul li {
+        list-style: none;
+        width: 100%;
+        background-color: rgb(52, 51, 51);
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 15px;
+      }
+      .section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column: 3/8;
+        grid-template-rows: repeat(5, 1fr);
+        grid-row: 1/6;
+        gap: 20px;
+      }
+      .welcome {
+        grid-column: 1/4;
+        grid-row: 1/3;
+        color: white;
+        background-image: linear-gradient(to right, blue, rgb(42, 26, 102));
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        line-height: 30px;
+      }
+      .welcome h2 {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 30px;
+        font-family: cursive;
+        font-weight: bold;
+      }
+      .welcome p {
+        margin-left: 20px;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      #btn1 {
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 35px;
+        width: 150px;
+        border-radius: 8px;
+        background-color: rgb(29, 29, 29);
+        color: white;
+        font-size: 20px;
+      }
+      .weather {
+        grid-column: 4/6;
+        grid-row: 1/2;
+        background-color: #222;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      .today {
+        grid-column: 4/6;
+        grid-row: 2/3;
+        background-color: #222;
+        border-radius: 10px;
+        color: white;
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+      .today ul {
+        margin-left: 25px;
+        margin-top: 10px;
+        line-height: 25px;
+      }
+      .today h2 {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .peace{
+        grid-column: 1/3;
+        grid-row: 3/5;
+        border-radius: 10px;
+        background-color: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .peace h3{
+        font-family: cursive;
+        font-size: 25px;
+        font-weight: 400;
+      }
+      .gallery{
+         grid-column: 3/6;
+        grid-row: 3/5;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        border: 2px solid red;
+        padding: 10px;
+        margin-right: 20px;
+        gap: 5px;
+      }
+      img{
+        height: 190px;
+        width: 190px;
+      }
+      .new{
+        grid-column: 1/2;
+        border: 1px solid black;
+    background-color: #222;
+     border-radius: 10px;
+     color: white;
+     padding: 15px;
+     justify-items: center;
+     align-items: center;
+      }
+      .new h3{
+        font-size: 25px;
+        font-weight: 800;
+        margin-top: 10px;
+      }
+      .new p{
+         margin-top: 10px;
+          font-size: 20px;
+          line-height: 40px;
+      }
+      .tasks{
+    border: 1px solid black;
+    background-color: #222;
+    grid-column: 2/3;
+     border-radius: 10px;
+      color: white;
+      padding: 15px;
+      justify-items: center;
+      align-items: center;
+}
+.ui{
+    border: 1px solid black;
+    background-color: #222;
+    grid-column: 3/4;
+     border-radius: 10px;
+      color: white;
+      padding: 15px;
+      justify-items: center;
+      align-items: center;
+}
+      .footer {
+        color: white;
+        background-color: rgba(120, 170, 255, 0.25);
+        border-radius: 15px;
+        grid-column: 1/8;
+        grid-row: 7/8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h2>Serenity</h2>
+        <input type="text" placeholder="Search...." />
+        <p id="bell">
+          🔔<img
+            src="https://plus.unsplash.com/premium_photo-1664304362237-8040f0ecac98?q=80&w=682&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            id="img1"
+          />
+        </p>
+      </header>
+      <main class="main">
+        <aside class="side">
+          <h3>Menu</h3>
+          <ul>
+            <li>Home</li>
+            <li>Discover</li>
+            <li>Gallery</li>
+            <li>Music</li>
+            <li>Tasks</li>
+            <li>Profile</li>
+            <li>Settings</li>
+          </ul>
+        </aside>
+        <section class="section">
+          <div class="welcome">
+            <h2>Good Evening</h2>
+            <p>Relax. Breathe. Create something amazing.</p>
+            <button id="btn1">Explore</button>
+          </div>
+          <div class="weather">
+            <h1>Weather</h1>
+
+            <h1>22°C</h1>
+
+            <p>Cloudy</p>
+          </div>
+          <div class="today">
+            <h2>Today's Program</h2>
+            <ul>
+              <li>completed:8</li>
+              <li>pending:2</li>
+              <li>Focus:5h</li>
+            </ul>
+          </div>
+          <div class="peace">
+             <h3>"Every sunset brings the promise "
+          </div>
+          <div class="gallery">
+             <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=300"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=300"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=300"
+          />
+          </div>
+         <div class="new">
+                <h3>Now playing</h3>
+                <p>Midnight Waves</p>
+                <h5>⏮ ▶ ⏭</h5>
+            </div>
+         <div class="tasks">
+                <h1>Tasks</h1>
+                <ul>
+                    <li>✅Reading</li>
+                    <li> ✅CSS Grid</li>
+                    <li> journal</li>
+                </ul>
+            </div>
+          <div class="ui">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  style="height: 60px; width: 60px; border-radius: 50%;">
+                    <h1>Nature</h1>
+                </div>
+            </div>
+        </section>
+      </main>
+      <footer class="footer">
+        Designed by Krishna sai • HTML & CSS Grid Assignment
+      </footer>
+    </div>
+  </body>
+</html>

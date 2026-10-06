@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reservations.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">SAGE</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/menu/menu.html">Menu</a></li>
+                <li><a href="../../pages/reservations/reservations.html">Reservations</a></li>
+                <li><a href="../../pages/gallery/gallery.html">Gallery</a></li>
+                <li><a href="../../pages/about/about.html">About</a></li>
+                <li><a href="../../pages/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>RESERVATION</h1>
+        </div>
+    </section>
+
+    <section class="res-page">
+        <div class="res-page-inner">
+
+            <div class="res-page-heading">
+                <p class="res-page-eyebrow">Reservation</p>
+                <h1>Book Table</h1>
+            </div>
+
+            <form class="res-page-form" action="#" method="post">
+                <div class="res-page-row">
+                    <div class="res-page-field">
+                        <label for="res-date">Date</label>
+                        <input type="date" id="res-date" name="date" required>
+                    </div>
+                    <div class="res-page-field">
+                        <label for="res-time">Time</label>
+                        <select id="res-time" name="time">
+                            <option value="09:00">9:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00" selected>19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                        </select>
+                    </div>
+                    <div class="res-page-field">
+                        <label for="res-people">People</label>
+                        <select id="res-people" name="people">
+                            <option>1 person</option>
+                            <option>2 people</option>
+                            <option>3 people</option>
+                            <option>4 people</option>
+                            <option>5+ people</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="res-page-row">
+                    <div class="res-page-field">
+                        <label for="res-name">Name</label>
+                        <input type="text" id="res-name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="res-page-field">
+                        <label for="res-phone">Phone</label>
+                        <input type="tel" id="res-phone" name="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="res-page-field">
+                        <label for="res-email">Email</label>
+                        <input type="email" id="res-email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="res-page-btn">Book Table</button>
+            </form>
+
+            <div class="res-page-info">
+                <div class="res-page-info-col">
+                    <h3>Reserve By Phone</h3>
+                    <p>Prefer to book over a call? Reach out any time during opening hours and our team will confirm
+                        your table on the spot. Walk-ins are welcome, but a call ahead guarantees your seat: <a
+                            href="tel:+914000000000">+91 40 0000 0000</a></p>
+                </div>
+                <div class="res-page-info-col">
+                    <h3>For Event Booking</h3>
+                    <p>Planning a birthday, anniversary, or a small get-together? We host private groups of 10 or more
+                        with a dedicated section of the restaurant. Call ahead to check availability: <a
+                            href="tel:+914000000000">+91 40 0000 0000</a></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-inner">
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li><span class="footer-label">Address:</span> Road No. 12, Banjara Hills, Hyderabad</li>
+                    <li><span class="footer-label">Phone:</span> +91 40 0000 0000</li>
+                    <li><span class="footer-label">Email:</span> hello@sagekitchen.in</li>
+                </ul>
+
+                <h4 class="footer-hours-heading">Opening Times</h4>
+                <p class="footer-hours">9:30 AM - 11:00 PM<br>Every Day</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../menu/menu.html">Menu</a></li>
+                    <li><a href="../reservations/reservations.html">Reservations</a></li>
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-gallery-col">
+                <h4>Gallery</h4>
+                <div class="footer-gallery">
+                   <img src="../../assets/images/dish1.jpg" alt="Dish photo">
+                    <img src="../../assets/images/dish2.jpg" alt="Dish photo">
+                    <img src="../../assets/images/dish3.jpg" alt="Dish photo">
+                    <img src="../../assets/images/dish4.jpg" alt="Dish photo">
+                    <img src="../../assets/images/dish5.jpg" alt="Dish photo">
+                    <img src="../../assets/images/dishh6.jpg" alt="Dish photo">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Sage Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

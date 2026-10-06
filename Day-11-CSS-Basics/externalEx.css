@@ -1,0 +1,24 @@
+#one{
+    color:#00ff00;
+    background-color:hsl(0,100%, 50%);
+}
+#two{
+    color: #ff0000;
+    background-color:hsl(120, 100%, 50%);
+}
+#three{
+    color: #ffff00;
+    background-color:hsl(240, 100%, 50%);
+}
+#four{
+    color: #0000ff;
+    background-color:hsl(60, 100%, 50%);
+}
+#five{
+    color:#00ffff;
+    background-color:hsl(300, 100%, 50%);
+}
+#six{
+    color: #ff00ff;
+    background-color:hsl(180, 100%, 50%);
+}
